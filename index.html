@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOLU Social Listening Dashboard</title>
+  <meta name="description" content="Dashboard analisis sentimen lintas platform untuk diskursus FOLU Net Sink 2030 dan FOLU Talks." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241810'/%3E%3Ctext x='32' y='42' font-size='34' text-anchor='middle'%3E🌿%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">
+        <img src="assets/folu-logo.jpg" alt="FOLU Talks logo" onerror="this.style.display='none'" />
+        <div>
+          <span class="eyebrow">Kemenhut · FOLU Net Sink 2030</span>
+          <strong>Social Listening Dashboard</strong>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#sentiment">Sentiment</a>
+        <a href="#topics">Topics</a>
+        <a href="#risks">Risks</a>
+        <a href="#data">Data</a>
+      </div>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <span class="pill">Instagram · YouTube · TikTok · Web discourse</span>
+        <h1>Bagaimana publik merespons FOLU Talks dan FOLU Net Sink 2030?</h1>
+        <p>
+          Dashboard ini merangkum scraping lintas platform, sentiment rule-based,
+          topic clustering, stance, dan risk flags untuk membantu membaca awareness,
+          pain point, serta rekomendasi komunikasi publik.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="data/folu_social_listening_report.xlsx">Download XLSX Report</a>
+          <a class="btn" href="data/folu_social_comments_sentiment.csv">Download Comments CSV</a>
+        </div>
+      </div>
+      <div class="hero-card glass">
+        <div class="hero-card-top">
+          <span>Overall Signal</span>
+          <strong id="overallSignal">Loading...</strong>
+        </div>
+        <div class="signal-bars" id="overallBars"></div>
+        <p id="overallNarrative">Loading dashboard data...</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="kpis" id="kpiGrid"></section>
+
+    <section class="panel-grid two" id="sentiment">
+      <article class="panel">
+        <div class="section-head">
+          <span class="eyebrow">Sentiment</span>
+          <h2>Distribusi komentar publik</h2>
+        </div>
+        <div class="chart-wrap"><canvas id="sentimentCanvas" width="560" height="320"></canvas></div>
+      </article>
+      <article class="panel">
+        <div class="section-head">
+          <span class="eyebrow">Platform</span>
+          <h2>Komparasi per kanal</h2>
+        </div>
+        <div id="platformBreakdown" class="stack-list"></div>
+      </article>
+    </section>
+
+    <section class="panel" id="topics">
+      <div class="section-head row">
+        <div>
+          <span class="eyebrow">Topic Clusters</span>
+          <h2>Topik yang paling sering muncul</h2>
+        </div>
+        <p>Topic dibuat dari keyword rules agar transparan dan mudah diaudit.</p>
+      </div>
+      <div id="topicGrid" class="topic-grid"></div>
+    </section>
+
+    <section class="panel-grid two" id="risks">
+      <article class="panel danger-panel">
+        <div class="section-head">
+          <span class="eyebrow">Risk Flags</span>
+          <h2>Isu reputasi yang perlu dipantau</h2>
+        </div>
+        <div id="riskList" class="risk-list"></div>
+      </article>
+      <article class="panel">
+        <div class="section-head">
+          <span class="eyebrow">Recommendations</span>
+          <h2>Aksi komunikasi berikutnya</h2>
+        </div>
+        <ol id="recommendations" class="recommendations"></ol>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-head row">
+        <div>
+          <span class="eyebrow">High-impact Posts</span>
+          <h2>Konten dengan engagement menonjol</h2>
+        </div>
+        <p>Diurutkan dari komentar/like/view yang tersedia.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="topPostsTable"></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head row">
+        <div>
+          <span class="eyebrow">Representative Comments</span>
+          <h2>Komentar publik yang mewakili sinyal utama</h2>
+        </div>
+        <p>Author dianonimkan di dataset publik.</p>
+      </div>
+      <div id="commentsList" class="comments-list"></div>
+    </section>
+
+    <section class="panel data-panel" id="data">
+      <div class="section-head row">
+        <div>
+          <span class="eyebrow">Data & Method</span>
+          <h2>Download, metodologi, dan status scraping</h2>
+        </div>
+      </div>
+      <div class="data-grid">
+        <div>
+          <h3>Dataset</h3>
+          <ul class="downloads">
+            <li><a href="data/folu_social_listening_report.xlsx">Full Excel report</a></li>
+            <li><a href="data/folu_social_comments_sentiment.csv">Social comments sentiment CSV</a></li>
+            <li><a href="data/folu_posts_master.csv">Posts master CSV</a></li>
+            <li><a href="data/folu_risk_flags.csv">Risk flags CSV</a></li>
+            <li><a href="data/dashboard_data.json">Dashboard JSON</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Scraping status</h3>
+          <div id="sourceStatus" class="method-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>FOLU Social Listening · Generated from public/available platform data</span>
+    <span id="processedAt"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1093 @@
+{
+  "metrics": {
+    "processed_at": "2026-06-16 00:36:48 +0700",
+    "posts_total": 53,
+    "social_comments_total": 301,
+    "meaningful_comments_total": 236,
+    "web_discourse_rows": 18,
+    "platforms": [
+      "Instagram",
+      "TikTok",
+      "YouTube"
+    ],
+    "sentiment_counts": {
+      "neutral": 216,
+      "positive": 63,
+      "negative": 22
+    },
+    "meaningful_sentiment_counts": {
+      "neutral": 151,
+      "positive": 63,
+      "negative": 22
+    },
+    "risk_comment_rows": 323,
+    "source_status": {
+      "instagram": "BYOB + Instagram API/session scrape available from prior task; comments included.",
+      "youtube": "YouTube streams/comments dataset included from prior scrape.",
+      "tiktok": "BYOB discovery worked; Obscura attempted but returned blank/eval null on TikTok; fallback extractor/API/session used; comments included.",
+      "website": "BYOB verified seeds + Obscura bulk text; zero-byte PPID pages excluded during cleaning."
+    }
+  },
+  "sentiment_by_platform": [
+    {
+      "platform": "TikTok",
+      "sentiment_family": "neutral",
+      "count": 137
+    },
+    {
+      "platform": "YouTube",
+      "sentiment_family": "neutral",
+      "count": 41
+    },
+    {
+      "platform": "Instagram",
+      "sentiment_family": "neutral",
+      "count": 38
+    },
+    {
+      "platform": "TikTok",
+      "sentiment_family": "positive",
+      "count": 33
+    },
+    {
+      "platform": "YouTube",
+      "sentiment_family": "positive",
+      "count": 21
+    },
+    {
+      "platform": "TikTok",
+      "sentiment_family": "negative",
+      "count": 16
+    },
+    {
+      "platform": "Instagram",
+      "sentiment_family": "positive",
+      "count": 9
+    },
+    {
+      "platform": "YouTube",
+      "sentiment_family": "negative",
+      "count": 5
+    },
+    {
+      "platform": "Instagram",
+      "sentiment_family": "negative",
+      "count": 1
+    }
+  ],
+  "topics": [
+    {
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_family": "neutral",
+      "count": 81
+    },
+    {
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_family": "neutral",
+      "count": 35
+    },
+    {
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_family": "positive",
+      "count": 32
+    },
+    {
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_family": "neutral",
+      "count": 26
+    },
+    {
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_family": "negative",
+      "count": 20
+    },
+    {
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_family": "positive",
+      "count": 15
+    },
+    {
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_family": "positive",
+      "count": 13
+    },
+    {
+      "topic_cluster": "Pertanyaan publik",
+      "sentiment_family": "neutral",
+      "count": 5
+    },
+    {
+      "topic_cluster": "Dukungan & apresiasi",
+      "sentiment_family": "positive",
+      "count": 3
+    },
+    {
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_family": "negative",
+      "count": 2
+    },
+    {
+      "topic_cluster": "Perubahan iklim & emisi",
+      "sentiment_family": "neutral",
+      "count": 2
+    },
+    {
+      "topic_cluster": "General/unclear",
+      "sentiment_family": "neutral",
+      "count": 1
+    },
+    {
+      "topic_cluster": "Perhutanan sosial & ekonomi karbon",
+      "sentiment_family": "neutral",
+      "count": 1
+    }
+  ],
+  "risks": [
+    {
+      "risk_flag": "deforestation_criticism",
+      "platform": "TikTok",
+      "count": 123
+    },
+    {
+      "risk_flag": "unanswered_question",
+      "platform": "TikTok",
+      "count": 78
+    },
+    {
+      "risk_flag": "conflict_land_tenure",
+      "platform": "TikTok",
+      "count": 50
+    },
+    {
+      "risk_flag": "climate_impact_concern",
+      "platform": "TikTok",
+      "count": 21
+    },
+    {
+      "risk_flag": "unanswered_question",
+      "platform": "Instagram",
+      "count": 20
+    },
+    {
+      "risk_flag": "unanswered_question",
+      "platform": "YouTube",
+      "count": 19
+    },
+    {
+      "risk_flag": "deforestation_criticism",
+      "platform": "YouTube",
+      "count": 3
+    },
+    {
+      "risk_flag": "conflict_land_tenure",
+      "platform": "Instagram",
+      "count": 3
+    },
+    {
+      "risk_flag": "conflict_land_tenure",
+      "platform": "YouTube",
+      "count": 2
+    },
+    {
+      "risk_flag": "climate_impact_concern",
+      "platform": "YouTube",
+      "count": 1
+    },
+    {
+      "risk_flag": "climate_impact_concern",
+      "platform": "Instagram",
+      "count": 1
+    },
+    {
+      "risk_flag": "deforestation_criticism",
+      "platform": "Instagram",
+      "count": 1
+    },
+    {
+      "risk_flag": "trust_greenwashing_risk",
+      "platform": "TikTok",
+      "count": 1
+    }
+  ],
+  "top_posts": [
+    {
+      "platform": "TikTok",
+      "source_account": "@afni.z",
+      "post_type": "video/reel",
+      "date": "2023-06-05",
+      "title_or_caption": "#deforestasiindonesia #deforestasi #folunetsink2030 #kawasanhutan #desamandiangin #desadosan #rantaubertuah #siaksriindrapura #afnisiak #kawankitoafni",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366",
+      "likes": 3490.0,
+      "comments": 282.0,
+      "shares": 411.0,
+      "views": 80200.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-12",
+      "title_or_caption": "Sobat Hijau, sadar gak sih cuaca makin random? Lagi panas nyengat, tiba-tiba hujan nggak kenal waktu😔 Ternyata semua itu ada hubungannya sama emisi yang terus naik. Simak penjelasannya di video berikut ini, ya! #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7594277825205751061",
+      "likes": 50.0,
+      "comments": 15.0,
+      "shares": 12.0,
+      "views": 2260.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-12-17",
+      "title_or_caption": "FOLU Talks: The Future Of Industrial Plantation Forest in Contributing to Renewable Energy.",
+      "url": "https://www.youtube.com/watch?v=VAWbmpRDDeM",
+      "likes": "",
+      "comments": 15.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-12-03",
+      "title_or_caption": "FOLU TALKS : UNLOCKING THE POTENTIAL OF CARBON ECONOMIC VALUE",
+      "url": "https://www.youtube.com/watch?v=r8wyfC80JHk",
+      "likes": "",
+      "comments": 15.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2023-08-04",
+      "title_or_caption": "Sobat Hijau, sudah saatnya nih kita saling bantu untuk mengurangi pemanasan global. Ini dia beberapa cara sederhana yang bisa kita lakukan demi lingkungan yang lebih sehat! #KLHK #KamusDigitalKehutanan #PemanasanGlobal #fypシ #IndonesiaFoluNetSink2030 #FoluNetSink2030",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7263382272806587653",
+      "likes": 1584.0,
+      "comments": 10.0,
+      "shares": 137.0,
+      "views": 699200.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-08-04 15:47:12 +0700",
+      "title_or_caption": "Youth Act: Forest Fire Control",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/",
+      "likes": 788.0,
+      "comments": 10.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-06-24 14:12:55 +0700",
+      "title_or_caption": "Mengenal Lebih Jauh RBP Tingkat Tapak: Pembelajaran dari Kalimantan Timur",
+      "url": "https://www.instagram.com/p/DLRlSNGv--j/",
+      "likes": 401.0,
+      "comments": 9.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-13",
+      "title_or_caption": "“FOLU itu apa sih?” 🤔 Kira-kira Sobat Hijau sudah tau belum ya? Di video ini, kita rangkum reaksi netizen soal FOLU 😉 Lewat video ini, kita bahas kenapa FOLU penting buat kita semua! #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7594755168709725461",
+      "likes": 34.0,
+      "comments": 9.0,
+      "shares": 2.0,
+      "views": 1544.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@provpapuatengah",
+      "post_type": "video/reel",
+      "date": "2026-03-09",
+      "title_or_caption": "Papua Tengah Siap Dukung Indonesia’s FOLU Net Sink 2030! 🌿🇮🇩 Sesuai dengan komitmen global dalam Nationally Determined Contribution (NDC) dan Kepmen LHK No. 194 Tahun 2025, Pemerintah Provinsi Papua Tengah terus bergerak nyata dalam menjaga paru-paru dunia. Melalui program FOLU Net Sink 2030, kita menargetkan penyerapan emisi bersih sebesar 140 juta ton setara CO2. Di tahun 2025, Pemprov Papua Tengah telah berhasil merehabilitasi ±200 hektare hutan dan lahan! 🌳 Langkah strategis ke depan: ✅ Rest",
+      "url": "https://www.tiktok.com/@provpapuatengah/video/7615157668717628692",
+      "likes": 399.0,
+      "comments": 8.0,
+      "shares": 8.0,
+      "views": 8818.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-06-11",
+      "title_or_caption": "FOLU TALK: Jaga Hutan, Dapat Manfaat. Mengenal Result Based Payment lebih dekat.",
+      "url": "https://www.youtube.com/watch?v=UZBbIeLsnMI",
+      "likes": "",
+      "comments": 8.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-01",
+      "title_or_caption": "Dampak perubahan iklim semakin nyata, mulai dari cuaca ekstrem hingga meningkatnya risiko bencana. Pemahaman dan kesadaran bersama menjadi kunci dalam menghadapi tantangan ini. #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7590232058442616084",
+      "likes": 105.0,
+      "comments": 7.0,
+      "shares": 57.0,
+      "views": 4314.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@gusnar_ismail",
+      "post_type": "video/reel",
+      "date": "2025-07-01",
+      "title_or_caption": "Satu lagi kepercayaan yang diberikan oleh Pemerintah Pusat kepada Gorontalo, dimana Gorontalo ditunjuk sebagai tuan rumah Pekan Nasional (PENAS) Pertemuan Petani dan Nelayan Se-Indonesia, pada Tahun 2026 mendatang. Kurang lebih akan ada 30ribu petani dan nelayan dari seluruh wilayah yang akan berkumpul di Gorontalo, tepatnya di Kabupaten Gorontalo. Kita manfaatkan momen ini sebagai upaya untuk mempromosikan seluruh potensi daerah, termasuk pemanfaatan UMKM, pariwisata, sektor transportasi, dan s",
+      "url": "https://www.tiktok.com/@gusnar_ismail/video/7522053520753823032",
+      "likes": 86.0,
+      "comments": 7.0,
+      "shares": 10.0,
+      "views": 2944.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-16",
+      "title_or_caption": "“Perubahan iklim adalah tantangan bersama yang butuh aksi kolektif.” FOLU Net Sink 2030 berfokus pada pengurangan emisi melalui pengelolaan hutan dan penggunaan lahan. Pendekatan ini menempatkan sektor kehutanan sebagai bagian penting dalam strategi pengendalian perubahan iklim. #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7595875420482833685",
+      "likes": 80.0,
+      "comments": 7.0,
+      "shares": 4.0,
+      "views": 1910.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-08-19 18:23:09 +0700",
+      "title_or_caption": "Brew the Future: Kopi, Iklim, dan Aksi Anak Muda",
+      "url": "https://www.instagram.com/p/DNiOb_2RBW1/",
+      "likes": 767.0,
+      "comments": 6.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-19",
+      "title_or_caption": "FoLU Net Sink 2030 adalah komitmen Indonesia untuk menekan emisi dan meningkatkan serapan karbon dari sektor kehutanan dan penggunaan lahan. Melalui perlindungan hutan, pengelolaan lahan berkelanjutan, dan restorasi ekosistem, Indonesia berupaya berkontribusi nyata dalam pengendalian perubahan iklim global!🤩 #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7596931847225953557",
+      "likes": 71.0,
+      "comments": 6.0,
+      "shares": 2.0,
+      "views": 1952.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-05-28",
+      "title_or_caption": "FOLU TALK: Indonesia's FOLU Net Sink 2030, Bagaimana Kabarmu Hari Ini?",
+      "url": "https://www.youtube.com/watch?v=xz5uL8mHqDQ",
+      "likes": "",
+      "comments": 6.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-11-19",
+      "title_or_caption": "FOLU Talks: Dari Hutan Sosial, Menuju Ekonomi Karbon Berkeadilan",
+      "url": "https://www.youtube.com/watch?v=Qpg7-uqujGg",
+      "likes": "",
+      "comments": 5.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-09-30 19:17:12 +0700",
+      "title_or_caption": "Kolaborasi Bersama di Provinsi Kalimantan Barat untuk Mewujudkan Indonesia’s FOLU Net Sink 2030",
+      "url": "https://www.instagram.com/p/DPOeAmFEa_G/",
+      "likes": 485.0,
+      "comments": 4.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-10-01",
+      "title_or_caption": "FOLU TALKS: Kolaborasi Bersama di Provinsi KALBAR untuk Mewujudkan Indonesia’s FOLU Net Sink 2030",
+      "url": "https://www.youtube.com/watch?v=Zs6CTRaax3Y",
+      "likes": "",
+      "comments": 4.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-07-09",
+      "title_or_caption": "FOLU TALK: Mengenal Voluntary Carbon Market Sektor Kehutanan",
+      "url": "https://www.youtube.com/watch?v=kVxbYKo2tGM",
+      "likes": "",
+      "comments": 4.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-09-17 10:58:51 +0700",
+      "title_or_caption": "Peningkatan Cadangan Karbon Melalui Rehabilitasi Hutan dan Lahan Berbasis Masyarakat di Provinsi Kalimantan Selatan",
+      "url": "https://www.instagram.com/p/DOsGpJXEVLL/",
+      "likes": 827.0,
+      "comments": 3.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-07-22 09:18:44 +0700",
+      "title_or_caption": "Kolaborasi Multipihak dalam Implementasi Voluntary Carbon Market di Sektor Kehutanan",
+      "url": "https://www.instagram.com/p/DMZJ4AFvljI/",
+      "likes": 547.0,
+      "comments": 3.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-10-15 09:34:11 +0700",
+      "title_or_caption": "Kolaborasi Multipihak Menuju Indonesia’s FOLU Net Sink 2030 di Provinsi Riau",
+      "url": "https://www.instagram.com/p/DP0DNlbkjqm/",
+      "likes": 287.0,
+      "comments": 3.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2025-12-27",
+      "title_or_caption": "Masih bingung soal FOLU Net Sink 2030? 🤔 Tenang, kamu nggak sendirian. Yuk, cari tahu bareng dan pahami peran hutan serta lahan dalam aksi iklim Indonesia! Tulis pertanyaanmu di kolom komentar, ya, Sob! #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7588521849152130325",
+      "likes": 58.0,
+      "comments": 3.0,
+      "shares": 3.0,
+      "views": 1347.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "YouTube",
+      "source_account": "@Kemenhut_RI",
+      "post_type": "stream/video",
+      "date": "2025-10-15",
+      "title_or_caption": "Kolaborasi Multipihak Menuju Indonesia’s FOLU Net Sink 2030 di Provinsi Riau",
+      "url": "https://www.youtube.com/watch?v=LjfY_mpXUs0",
+      "likes": "",
+      "comments": 3.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks YouTube streams scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-07-08 12:44:49 +0700",
+      "title_or_caption": "Mengenal Voluntary Carbon Market Sektor Kehutanan",
+      "url": "https://www.instagram.com/p/DL1eVMfx7vm/",
+      "likes": 1163.0,
+      "comments": 2.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-05-26 15:30:58 +0700",
+      "title_or_caption": "Indonesia’s FOLU Net Sink 2030, Bagaimana Kabarmu Hari Ini?",
+      "url": "https://www.instagram.com/p/DKHDKfYPz5K/",
+      "likes": 1027.0,
+      "comments": 2.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "Instagram",
+      "source_account": "@kemenhut",
+      "post_type": "post/reel",
+      "date": "2025-11-04 10:37:33 +0700",
+      "title_or_caption": "Mencipta Karir, Menjaga Bumi: Kolaborasi Lintas Sektor dalam Penyiapan SDM Green Jobs Kehutanan",
+      "url": "https://www.instagram.com/p/DQnqXKQkp6I/",
+      "likes": 969.0,
+      "comments": 2.0,
+      "shares": "",
+      "views": "",
+      "relevance": "FOLU Talks Instagram scrape"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@kemenhut_ri",
+      "post_type": "video/reel",
+      "date": "2026-01-02",
+      "title_or_caption": "Pemahaman terhadap Rencana Operasional FOLU penting untuk memastikan implementasi kebijakan berjalan efektif dan terukur. Video ini menyajikan gambaran singkat mengenai substansi rencana tersebut. Simak sampai akhir, ya, Sob! #FOLUNetSink2030 #Kemenhut",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7590699746059128084",
+      "likes": 52.0,
+      "comments": 2.0,
+      "shares": 1.0,
+      "views": 1188.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    },
+    {
+      "platform": "TikTok",
+      "source_account": "@bphl.xii.palangkaraya",
+      "post_type": "video/reel",
+      "date": "2024-07-31",
+      "title_or_caption": "#Sobat rimba, FOLU Net Sink 2030 adalah konsep yang bertujuan untuk menggunakan hutan dan praktik penggunaan lahan berkelanjutan guna mengurangi emisi gas rumah kaca dan meningkatkan penyerapan karbon. Apa dan bagaimana kita mencapai target FOLU, yuk simak video berikut! #klhk #ditjenphl #bphlxpalangkaraya #folunetsink2030",
+      "url": "https://www.tiktok.com/@bphl.xii.palangkaraya/video/7397662241408961797",
+      "likes": 23.0,
+      "comments": 2.0,
+      "shares": 3.0,
+      "views": 1378.0,
+      "relevance": "FOLU keyword / Net Sink related TikTok discovery"
+    }
+  ],
+  "representative_comments": [
+    {
+      "platform": "Instagram",
+      "content_date": "2025-11-04 08:46:12 +0000",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Akhirnya semangat kolaborasi, tapi semoga tulus dan terbuka.",
+      "url": "https://www.instagram.com/p/DQnqXKQkp6I/"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2026-01-14 08:22:15",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 1.0,
+      "post_comment_count": 9.0,
+      "text_for_sentiment": "MIN KUDU NGADU KE SIAPA LAGI ADA GAJAH JADI TULANG PUNGGUNG MANUSIA DI BALI. DI PERLAKUKAN TIDAK BAIK!! TOLLNG DONG BANTU.",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7594755168709725461"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Tujuan Sekolah dan Kuliah.....mencetak pegawai pns dan swasta....bukan mencetak pengusaha ..sekolah dan universitas..itu baik...tapi karena gak diterima jadi pns dan swasta...akhirnya lulusan sma dan kuliah....banyak buka usaha sendiri....dan persaingan sengit.........ada sampe yang gak makan.... Kritik bagi sekolah universitas..... Mengapa disekolah dan kuliah cuma diajari kejar nilai...dan pelajaran yang gak manfaat untuk bertahan hidup.... Mengapa kok siswa dan mahasiswa gak diajari mandiri hidup... Misal hasilkan pangan mandiri... Buat pakaian Buat rumah Dan transaksi barter.... Klo pangan dihasilkan orang lain Pakaian dihasilkan orang lain Rumah dihasilkan orang lain.... Kapan kita mandirinya????? seharusnya pelajaran hasilkan pangan mandiri buat pakaian buat rumah diajarkan disekolah dan universitas....sehingga siswa dan mahasiswa tau caranya.... Ketika orang orang yang hasilkan makanan dan api untuk memasak pakaian rumah tumbang karena krisis...kita ikut tumbang.... Klo negara krisis ekonomi....inflasi atau deflasi Klo perusahaan besar perusahaan pakaian tumbang.. Krisis energi tak terbarukan..... Bagaimana kita bisa siap???? Sebab kita tak bisa hasilkan api sendiri gak bisa hasilkan sumber pangan sendiri Gak bisa hasilkan Pakaian sendiri Gak bisa hasilkan Rumah sendiri....... Trus pengaruh krisis global inflasi deflasi kurs rupiah terhadap dollar... Kenaikan LPG Listrik BBM Kita kalah dengan suku asmat suku baduy suku dayak suku mentawai..... Mereka memang kuno......tapi mereka gak bergantung harga minyak dunia kurs rupiah terhadap dollar...inflasi deflasi .....tak takut kelangkaan BBM LPG nikel batubara......bisa bertahan tanpa listrik.... Karena mereka bisa hasilkan pangan mandiri dan api memasak mandiri....mandiri pangan.....transaksi barter...kehidupan sederhana.....minum ngambil dari sumur sederhana... Transportasi darat menggunakan kuda/keledai... Sekarang kita harus mandiri pangan....tiap kanan kiri jalan dari sabang sampai merauke ditanami berbagai macam pohon dan tanaman buah buahan ubi singkong porang sayur cabe tomat rempah2 kacang2an biji bijian....pohon kapas...untuk dibarter Warga +62 yang disekolah dan kuliah...harus tau cara hasilkan pangan mandiri ..ternak ayam burung puyuh pedaging dan petelur dilahan sempit..dan ternak ikan dan udang air tawar dilahan sempit....dikolam atau ember khusus budidaya...ternak kambing sapi dilahan luas..... Semuanya untuk dibarter dengan beras....dengan tetangga yang diajari menenun pakaian dari benang dan tanaman kapas yang ditanam disekitarnya.... Juga diajarkan cara buat rumah sederhana.... Supaya kita mandiri...... Gak tergantung kapitalis terus masalah pangan air pakaian rumah.....tapi produktif dalam masalah tadi.... Transportasi darat unta kuda keledai dikembangbiakkan dilestarikan padang rumput... Itu lebih baik dari motor dan mobil yang tergantung nikel solar bbm yang adalah energi tak terbarukan...yang banyak merusak alam dan lingkungan hidup Klo bisa sedunia jadi frutarian(pemakan buah2an) sekalian makan buah buahan saja...enak gak bergantung penanak nasi dan LPG...yang dari listrik dan gas energi tak terbarukan....tanam pohon dan tanaman buah buahan dibanyak tempat sebanyak2nya untuk dirawat dan dimakan dan dibarter dan akses pangan gratis.....di tiap kanan kiri jalan dari sabang sampai merauke... Minimal itu yang baik bagi alam lingkungan hidup dan generasi pelanjut kita cucu cicit dst......",
+      "url": "https://www.youtube.com/watch?v=VAWbmpRDDeM"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "......Tujuan Sekolah dan Kuliah.....mencetak pegawai pns dan swasta....bukan mencetak pengusaha ..sekolah dan universitas..itu baik...tapi karena gak diterima jadi pns dan swasta...akhirnya lulusan sma dan kuliah....banyak buka usaha sendiri....dan persaingan sengit.........ada sampe yang gak makan.... Kritik bagi sekolah universitas..... Mengapa disekolah dan kuliah cuma diajari kejar nilai...dan pelajaran yang gak manfaat untuk bertahan hidup.... Mengapa kok siswa dan mahasiswa gak diajari mandiri hidup... Misal hasilkan pangan mandiri... Buat pakaian Buat rumah Dan transaksi barter.... Klo pangan dihasilkan orang lain Pakaian dihasilkan orang lain Rumah dihasilkan orang lain.... Kapan kita mandirinya????? seharusnya pelajaran hasilkan pangan mandiri buat pakaian buat rumah diajarkan disekolah dan universitas....sehingga siswa dan mahasiswa tau caranya.... Ketika orang orang yang hasilkan makanan dan api untuk memasak pakaian rumah tumbang karena krisis...kita ikut tumbang.... Klo negara krisis ekonomi....inflasi atau deflasi Klo perusahaan besar perusahaan pakaian tumbang.. Krisis energi tak terbarukan..... Bagaimana kita bisa siap???? Sebab kita tak bisa hasilkan api sendiri gak bisa hasilkan sumber pangan sendiri Gak bisa hasilkan Pakaian sendiri Gak bisa hasilkan Rumah sendiri....... Trus pengaruh krisis global inflasi deflasi kurs rupiah terhadap dollar... Kenaikan LPG Listrik BBM Kita kalah dengan suku asmat suku baduy suku dayak suku mentawai..... Mereka memang kuno......tapi mereka gak bergantung harga minyak dunia kurs rupiah terhadap dollar...inflasi deflasi .....tak takut kelangkaan BBM LPG nikel batubara......bisa bertahan tanpa listrik.... Karena mereka bisa hasilkan pangan mandiri dan api memasak mandiri....mandiri pangan.....transaksi barter...kehidupan sederhana.....minum ngambil dari sumur sederhana... Transportasi darat menggunakan kuda/keledai... Sekarang kita harus mandiri pangan....tiap kanan kiri jalan dari sabang sampai merauke ditanami berbagai macam pohon dan tanaman buah buahan ubi singkong porang sayur cabe tomat rempah2 kacang2an biji bijian....pohon kapas...untuk dibarter Warga +62 yang disekolah dan kuliah...harus tau cara hasilkan pangan mandiri ..ternak ayam burung puyuh pedaging dan petelur dilahan sempit..dan ternak ikan dan udang air tawar dilahan sempit....dikolam atau ember khusus budidaya...ternak kambing sapi dilahan luas..... Semuanya untuk dibarter dengan beras....dengan tetangga yang diajari menenun pakaian dari benang dan tanaman kapas yang ditanam disekitarnya.... Juga diajarkan cara buat rumah sederhana.... Supaya kita mandiri...... Gak tergantung kapitalis terus masalah pangan air pakaian rumah.....tapi produktif dalam masalah tadi.... Transportasi darat unta kuda keledai dikembangbiakkan dilestarikan padang rumput... Itu lebih baik dari motor dan mobil yang tergantung nikel solar bbm yang adalah energi tak terbarukan...yang banyak merusak alam dan lingkungan hidup Klo bisa sedunia jadi frutarian(pemakan buah2an) sekalian makan buah buahan saja...enak gak bergantung penanak nasi dan LPG...yang dari listrik dan gas energi tak terbarukan....tanam pohon dan tanaman buah buahan dibanyak tempat sebanyak2nya untuk dirawat dan dimakan dan dibarter dan akses pangan gratis.....di tiap kanan kiri jalan dari sabang sampai merauke... Minimal itu yang baik bagi alam lingkungan hidup dan generasi pelanjut kita cucu cicit dst......",
+      "url": "https://www.youtube.com/watch?v=VAWbmpRDDeM"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-23 15:05:57",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "izin bertanya,Bu di daerah kami khusus nya Bengkayang / Kalbar di kampung kami, banyak tanah pribadi di buat menjadi hutan lindung,",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-13 05:54:30",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "jaga kesehatan dan tetap semangat buk , salam dari kota Jambi ,",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-25 01:08:29",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "terimakasih atas edukasi nya smoga slalu membuka luas pengetahuan masyarakat",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-12-04 10:15:52 +0000",
+      "topic_cluster": "Dukungan & apresiasi",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Mantap semoga sukses kedepannya",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Di tempat kami hutan habiz d babat pembalakn liar pak,,airterjun objek wisata d tempat kami yg biasanya airnya besar sekr sudah kecil sekali karena penebang liar ...saya ingin sekali menghijaukan kembali hutan kami pak ,,mohon bantuannya pak ,,sebelum semua daerah kami d gunduli penebang liar 👏👏",
+      "url": "https://www.youtube.com/watch?v=UZBbIeLsnMI"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "telat hadir, terima kasih",
+      "url": "https://www.youtube.com/watch?v=xz5uL8mHqDQ"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-23 13:56:18",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "bagaimana bu klo lahan kami bayar pajaknya tpi perusahaan yg ambil lahannya?",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-22 10:27:39",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "bu' klo melakukan penambangan di hutan lindung apakah boleh",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-22 05:30:14",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "mantap buk trus bri edukasi , pentingkan msyarakat kcil",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-22 07:04:47",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "numpanv tanya kka 🙏 gmna aturanyabjika ada pertambangan di wilayah perkebunan. apakah ada 2 izin atau bagai mana?",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-14 01:27:01",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "selamat pagi bu. ijin bertanya. kebetulan desa kami juga mengalami konflik demikian, dimana kawasan desa masuk dalam HGU perusahaan pengelola hakasia",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-29 15:42:35",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "ijin bertanya bagaimana dengan izin pertambangan yang berada di areal hutan produksi terbatas, yang jelas suda kontradiksi dengan misi folu net sink,",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2026-01-04 11:24:35",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "conflict_land_tenure; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 3.0,
+      "text_for_sentiment": "mantap keren min ❤️",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7588521849152130325"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2026-01-01 03:43:27",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism; climate_impact_concern; unanswered_question",
+      "comment_like_count": 6.0,
+      "post_comment_count": 7.0,
+      "text_for_sentiment": "stop deforestasi ya Kemenhut ayo dong buat kebijakan yang berani memberikan solusi yang konkret apa tidak sakit sedih melihat para satwa liar yang seharusnya dilindungi oleh negara tapi akhirnya perlahan punah semuanya",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7590232058442616084"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-05 13:00:31",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 2.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "Ibu Afni IDOLAKUUUUU, org Siak untuk masyarakat SIAK.. 😍😍😍",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-05 13:20:54",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 2.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "yok semangat buk",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-05 12:19:30",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 2.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "sehat n sukses selalu kk.",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-10-01 03:44:23 +0000",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 2.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Ditunggu kehadirannya nanti siang semuanya 🙌🏻",
+      "url": "https://www.instagram.com/p/DPOeAmFEa_G/"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-04 04:56:27",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "ibu tolong donk carikan solusi buat kampung saya yang hutan bakaux di tebang dan di buat empang",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-20 10:47:28",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "hutan untuk perusahaan.",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-03 01:23:45",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "benar buk..semangat bela masyarakat kcl buk..",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-06 14:56:23",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism; unanswered_question",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "Boleh ajukan tp blm tentu di setujui",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-30 12:41:14",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "mandiangin hadir Buk..🙏",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-25 13:34:24",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "deforestation_criticism",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "semangat Bu salam sehat",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2026-01-01 04:45:07",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "climate_impact_concern; unanswered_question",
+      "comment_like_count": 1.0,
+      "post_comment_count": 7.0,
+      "text_for_sentiment": "Hijau jangan SEMBARANG HIJAU, SAWIT JUGA HIJAU, EUKALIPTUS JUGA HIJAU, TAPI PAHAM KAN DAMPAK MASING2 AKAAR DAN DAUNNYA??",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7590232058442616084"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-08-04 11:42:53 +0000",
+      "topic_cluster": "Dukungan & apresiasi",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 1.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "semangat pejuang langit biru🔥",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-08-04 11:28:51 +0000",
+      "topic_cluster": "Dukungan & apresiasi",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 1.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Keren banget....👏👏👏🔥",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 1.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Rehardiman KPHL Sijunjung....Hadir.",
+      "url": "https://www.youtube.com/watch?v=r8wyfC80JHk"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 1.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Selamat siang bpk/ibu, saya dari masyarakat kurang mampu, dengan pendidikan paling rendah, tapi saya tahu HUTAN adalah orang tua bagi saya, saya hidup karena ada air yang berasal dari hutan, saya pribadi meminta, jagalah hutan seperti orangtua mu dan jangan buat orangtua murka. Hutan pegunungan kendeng, hutan sumatra, hutan kalimantan, hutan sulawesi, hutan papua, dsb.",
+      "url": "https://www.youtube.com/watch?v=VAWbmpRDDeM"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-11-09 04:27:03 +0000",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Tetap semangat",
+      "url": "https://www.instagram.com/p/DQnqXKQkp6I/"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-10-15 10:39:36 +0000",
+      "topic_cluster": "Edukasi FOLU Net Sink 2030",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Salam Coll Tapak..sukses bu Kapus",
+      "url": "https://www.instagram.com/p/DP0DNlbkjqm/"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-12-05 00:31:56 +0000",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure; climate_impact_concern",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Agro forestri, paru2 sehat, lahan subur bebas dari ancaman bencana",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-08-09 09:19:35 +0000",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Hutan hijau langit biru, gambut aman bernapas nyaman🌿🌲🌳",
+      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
+    },
+    {
+      "platform": "Instagram",
+      "content_date": "2025-06-11 02:29:38 +0000",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Salam Lestari🔥",
+      "url": "https://www.instagram.com/p/DKvmEAGP92_/"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Ayesha Putri Delisna_Dinas Kehutanan Prov Sumbar HADIR 🎉",
+      "url": "https://www.youtube.com/watch?v=Qpg7-uqujGg"
+    },
+    {
+      "platform": "YouTube",
+      "content_date": "",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "positive",
+      "stance_label": "supportive_or_appreciative",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 0.0,
+      "post_comment_count": "",
+      "text_for_sentiment": "Hadir nyimak",
+      "url": "https://www.youtube.com/watch?v=UZBbIeLsnMI"
+    }
+  ],
+  "recommendations": [
+    "Prioritaskan explainer FOLU Net Sink 2030 yang menjawab pertanyaan publik dengan bahasa non-teknis.",
+    "Pisahkan komunikasi edukasi iklim dari isu konflik lahan, karena komentar kritis banyak muncul pada lahan/hutan lindung/perusahaan.",
+    "Gunakan format short video Q&A untuk menjawab komentar bertipe question_or_information_seeking.",
+    "Perkuat proof-of-work program lapangan: perhutanan sosial, kopi, KTH, dan cerita daerah cenderung lebih mudah dipahami publik.",
+    "Monitoring risiko greenwashing/deforestasi harus rutin karena sentiment negatif kecil tapi reputationally sensitive."
+  ]
+}
