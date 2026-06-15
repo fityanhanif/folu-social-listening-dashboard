@@ -20,12 +20,12 @@ SRC = {
 LOGO_SRC = Path('C:/Users/lenovo/Downloads/FOLU Talks Logo Coklat teks Coklat.jpg')
 
 POS_TERMS = {
-    'bagus','baik','mantap','keren','hebat','setuju','dukung','mendukung','semangat','terima kasih','terimakasih','sukses','hadir','bermanfaat','apresiasi','kolaborasi','lestari','adil','berkeadilan','solusi','jaga','menjaga','konservasi','rehabilitasi','restorasi','hijau','berkelanjutan','tulus','terbuka','top','good','great','excellent','amazing','love','idolaku','bantu','berhasil','siap','peduli','edukasi','percaya','inspiratif'
+    'bagus','baik','mantap','keren','hebat','setuju','dukung','mendukung','semangat','terima kasih','terimakasih','sukses','hadir','bermanfaat','apresiasi','kolaborasi','lestari','adil','berkeadilan','solusi','jaga','menjaga','konservasi','rehabilitasi','restorasi','hijau','berkelanjutan','tulus','terbuka','top','good','great','excellent','amazing','love','idolaku','berhasil','siap','peduli','edukasi','percaya','inspiratif'
 }
 NEG_TERMS = {
-    'gagal','buruk','jelek','bohong','omong kosong','pencitraan','korup','korupsi','bagi-bagi','jabatan','kontroversi','ambisi','deforestasi','banjir','bencana','rusak','merusak','kritik','masalah','konflik','mafia','tidak percaya','nggak percaya','ga percaya','gak percaya','parah','aneh','sulit','impossible','hoax','scam','tambang','penambangan','hutan lindung','perusahaan','ambil lahannya','dijual','tanda tanya','greenwashing','izin','krisis','emisi naik','tercemar'
+    'gagal','buruk','jelek','bohong','omong kosong','pencitraan','korup','korupsi','bagi-bagi','jabatan','kontroversi','ambisi','deforestasi','banjir','bencana','rusak','merusak','kritik','masalah','konflik','mafia','tidak percaya','nggak percaya','ga percaya','gak percaya','parah','aneh','sulit','impossible','hoax','scam','tambang','penambangan','hutan lindung','perusahaan','ambil lahannya','dijual','tanda tanya','greenwashing','izin','krisis','emisi naik','tercemar','tidak baik','diperlakukan tidak baik','di perlakukan tidak baik','penebang liar','pembalak','habiz d babat','habis dibabat','gunduli','stop deforestasi','stopdeforestasi','sedih','sakit','dampak','ancaman'
 }
-QUESTION_TERMS = {'apa','apakah','bagaimana','kapan','dimana','di mana','kenapa','mengapa','siapa','berapa','?','gimana','boleh','bisakah'}
+QUESTION_TERMS = {'apa','apakah','bagaimana','kapan','dimana','di mana','kenapa','mengapa','siapa','berapa','?','gimana','bisakah','bertanya','ijin bertanya','izin bertanya','tanya','tolong','mohon','bantu','ngadu','carikan solusi'}
 LOW_INFO = {'hadir','absen','ijin hadir','izin hadir','ok','oke','siap','mantap','terima kasih','thanks','makasih','🙏','👍','🔥','😍','hadirr','hadirrr'}
 
 TOPIC_RULES = [
@@ -67,39 +67,51 @@ def count_terms(s, terms):
     sl = s.lower()
     return sum(1 for t in terms if t in sl)
 
+def has_question_intent(s):
+    sl = s.lower()
+    if '?' in sl:
+        return True
+    for t in QUESTION_TERMS:
+        if t == '?':
+            continue
+        if re.search(r'(?<!\w)' + re.escape(t) + r'(?!\w)', sl):
+            return True
+    return False
+
 def classify(text, source='social'):
     raw = text or ''
     s = raw.lower().strip()
     pos = count_terms(s, POS_TERMS)
     neg = count_terms(s, NEG_TERMS)
-    is_q = any(q in s for q in QUESTION_TERMS)
+    is_q = has_question_intent(s)
     wc = word_count(raw)
     only_emoji = bool(emoji_re.fullmatch(raw.strip())) if raw.strip() else False
     low = s in LOW_INFO or wc <= 1 or only_emoji
     score = pos - neg
+    has_strong_criticism = any(t in s for t in ['stop deforestasi', 'stopdeforestasi', 'jangan', 'tidak baik', 'diperlakukan tidak baik', 'di perlakukan tidak baik', 'penebang liar', 'pembalak', 'habiz d babat', 'gunduli'])
     if low:
         sentiment = 'neutral_low_information'
+    elif is_q and not (has_strong_criticism and neg > pos):
+        sentiment = 'question'
     elif neg > pos:
         sentiment = 'negative'
     elif pos > neg:
         sentiment = 'positive'
-    elif is_q:
-        sentiment = 'neutral_question'
     else:
         sentiment = 'neutral'
     if source == 'web':
         stance = 'media_discourse_not_direct_public_comment'
     elif low:
         stance = 'low_information'
+    elif sentiment == 'question':
+        stance = 'question_or_information_seeking'
     elif neg > pos:
         stance = 'critical_or_concern'
     elif pos > neg:
         stance = 'supportive_or_appreciative'
-    elif is_q:
-        stance = 'question_or_information_seeking'
     else:
         stance = 'neutral_or_unclear'
-    emotion = 'concern' if neg > pos else 'appreciation' if pos > neg else 'curiosity' if is_q else 'low_information' if low else 'neutral'
+    emotion = 'curiosity_or_help_request' if sentiment == 'question' else 'concern' if sentiment == 'negative' else 'appreciation' if sentiment == 'positive' else 'low_information' if low else 'neutral'
     return sentiment, score, stance, emotion, low
 
 def topic(text):
@@ -129,7 +141,7 @@ def add_record(records, *, platform, content_type, topic_title, content_date, au
     text_clean = clean_text(text)
     sentiment, score, stance, emotion, low = classify(text_clean, 'web' if scope == 'media_or_web_discourse' else 'social')
     primary_topic, topic_list = topic(' '.join([str(topic_title or ''), text_clean]))
-    flags = risk_flags(text_clean + ' ' + str(topic_title or ''))
+    flags = risk_flags(text_clean)
     records.append({
         'analysis_scope': scope,
         'platform': platform,
@@ -194,7 +206,7 @@ for _, r in web.iterrows():
 comments = pd.DataFrame(records)
 posts_df = pd.DataFrame(posts).drop_duplicates('url')
 comments['platform'] = comments['platform'].fillna('Unknown')
-comments['sentiment_family'] = comments['sentiment_label'].replace({'neutral_low_information':'neutral','neutral_question':'neutral'})
+comments['sentiment_family'] = comments['sentiment_label'].replace({'neutral_low_information':'neutral','neutral_question':'neutral','question':'neutral'})
 meaningful = comments[(comments['analysis_scope']=='public_social_comment') & (comments['is_low_information']==False) & (comments['text_word_count']>=2)].copy()
 social = comments[comments['analysis_scope']=='public_social_comment'].copy()
 
@@ -212,10 +224,25 @@ for _, r in meaningful.iterrows():
 risk_df = pd.DataFrame(risk_rows)
 risk_summary = group_count(risk_df, ['risk_flag','platform']) if len(risk_df) else pd.DataFrame(columns=['risk_flag','platform','count'])
 
-# Top comments representative
-top_comments = meaningful.copy()
-top_comments['abs_score'] = top_comments['sentiment_score'].abs()
-top_comments = top_comments.sort_values(['abs_score','comment_like_count','post_comment_count'], ascending=False).head(40)
+# Representative comments: balanced examples for Positive, Negative, and Question.
+# Do not rank only by absolute sentiment score; that hides help-seeking questions
+# that are semantically important but score near zero in lexicon rules.
+top_pool = meaningful[meaningful['sentiment_label'].isin(['positive','negative','question'])].copy()
+top_pool['abs_score'] = top_pool['sentiment_score'].abs()
+top_pool['comment_like_count_sort'] = top_pool['comment_like_count'].fillna(0)
+top_pool['post_comment_count_sort'] = top_pool['post_comment_count'].fillna(0)
+parts = []
+for label, n in [('question', 8), ('negative', 8), ('positive', 8)]:
+    g = top_pool[top_pool['sentiment_label'] == label].copy()
+    if label == 'question':
+        g['urgent_request_score'] = g['text_for_sentiment'].str.lower().apply(lambda s: sum(t in s for t in ['ngadu','tolong','bantu','tidak baik','gajah','carikan solusi','mohon']))
+        g = g.sort_values(['urgent_request_score','comment_like_count_sort','post_comment_count_sort','text_word_count'], ascending=False).head(n)
+    elif label == 'negative':
+        g = g.sort_values(['abs_score','comment_like_count_sort','post_comment_count_sort'], ascending=False).head(n)
+    else:
+        g = g.sort_values(['sentiment_score','comment_like_count_sort','post_comment_count_sort'], ascending=False).head(n)
+    parts.append(g)
+top_comments = pd.concat(parts, ignore_index=True).drop_duplicates(['text_for_sentiment']).head(40)
 
 # Overall metrics
 metrics = {
@@ -276,7 +303,7 @@ with pd.ExcelWriter(DATA_DIR / 'folu_social_listening_report.xlsx', engine='open
     pd.DataFrame([metrics]).to_excel(w, sheet_name='metadata', index=False)
 (DATA_DIR / 'dashboard_data.json').write_text(json.dumps(dashboard, ensure_ascii=False, indent=2), encoding='utf-8')
 
-if LOGO_SRC.exists():
+if LOGO_SRC.exists() and not (ASSET_DIR / 'folu-logo.jpg').exists():
     shutil.copy2(LOGO_SRC, ASSET_DIR / 'folu-logo.jpg')
 
 print(json.dumps({

@@ -92,6 +92,7 @@ td a { color: var(--text); text-decoration: none; }
 .badge { display: inline-flex; padding: 5px 9px; border-radius: 999px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
 .badge.positive { color: #17220f; background: #9fd17a; }
 .badge.negative { color: #2b0d08; background: #ff9a86; }
+.badge.question { color: #13233b; background: #9fc6ff; }
 .badge.neutral, .badge.neutral_question, .badge.neutral_low_information { color: #2b2112; background: #dfc18b; }
 .comment-card p { margin: 10px 0; line-height: 1.65; color: var(--text); }
 .comment-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 12px; }
