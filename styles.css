@@ -28,8 +28,8 @@ a { color: inherit; }
 .hero, main, footer { position: relative; z-index: 1; }
 .hero { padding: 24px clamp(18px, 4vw, 56px) 40px; }
 .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; max-width: 1240px; margin: 0 auto 54px; }
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand img { width: 54px; height: 54px; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 16px; }
+.brand img { width: 150px; height: 78px; object-fit: contain; border-radius: 18px; border: 1px solid rgba(243,196,109,.28); background: #fff; padding: 7px; box-shadow: 0 14px 34px rgba(0,0,0,.2); }
 .brand strong { display: block; font-size: 18px; letter-spacing: -0.02em; }
 .eyebrow { display: inline-flex; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 800; }
 .nav-links { display: flex; gap: 10px; flex-wrap: wrap; }
