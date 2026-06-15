@@ -138,7 +138,7 @@ function renderComments(rows) {
         <span>${r.platform}</span>
         <span>·</span>
         <span>${r.topic_cluster}</span>
-        <span class="badge ${r.sentiment_label}">${r.sentiment_label}</span>
+        <span class="badge ${r.sentiment_label}">${r.sentiment_label === 'aspiration' ? 'public aspiration' : r.sentiment_label}</span>
         ${r.risk_flags ? `<span>⚠ ${r.risk_flags}</span>` : ''}
       </div>
       <p>${r.text_for_sentiment}</p>
@@ -161,7 +161,7 @@ async function init() {
     <span class="signal-metric positive"><small>Positive</small>${pct(counts.positive, total)}</span>
     <span class="signal-metric negative"><small>Negative</small>${pct(counts.negative, total)}</span>
   `;
-  document.getElementById('overallNarrative').textContent = `${fmt.format(m.social_comments_total)} komentar publik dianalisis. Sinyal terbesar masih neutral/question/low-information, dengan negative cluster kecil tapi penting untuk isu lahan, deforestasi, dan trust.`;
+  document.getElementById('overallNarrative').textContent = `${fmt.format(m.social_comments_total)} komentar publik dianalisis. Sinyal terbesar masih neutral/aspiration/low-information: banyak komentar berisi harapan, permintaan tindak lanjut, atau aduan publik; negative cluster kecil tapi penting untuk isu lahan, deforestasi, satwa, dan trust.`;
   renderBars('overallBars', counts);
   drawDonut(document.getElementById('sentimentCanvas'), counts);
   document.getElementById('kpiGrid').innerHTML = [

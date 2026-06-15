@@ -1,6 +1,6 @@
 {
   "metrics": {
-    "processed_at": "2026-06-16 01:32:57 +0700",
+    "processed_at": "2026-06-16 02:22:15 +0700",
     "posts_total": 53,
     "social_comments_total": 301,
     "meaningful_comments_total": 236,
@@ -11,16 +11,16 @@
       "YouTube"
     ],
     "sentiment_counts": {
-      "neutral": 227,
-      "positive": 53,
-      "negative": 21
+      "neutral": 231,
+      "positive": 52,
+      "negative": 18
     },
     "meaningful_sentiment_counts": {
-      "neutral": 162,
-      "positive": 53,
-      "negative": 21
+      "neutral": 166,
+      "positive": 52,
+      "negative": 18
     },
-    "risk_comment_rows": 128,
+    "risk_comment_rows": 147,
     "source_status": {
       "instagram": "BYOB + Instagram API/session scrape available from prior task; comments included.",
       "youtube": "YouTube streams/comments dataset included from prior scrape.",
@@ -32,12 +32,12 @@
     {
       "platform": "TikTok",
       "sentiment_family": "neutral",
-      "count": 145
+      "count": 148
     },
     {
       "platform": "YouTube",
       "sentiment_family": "neutral",
-      "count": 44
+      "count": 45
     },
     {
       "platform": "Instagram",
@@ -47,7 +47,7 @@
     {
       "platform": "TikTok",
       "sentiment_family": "positive",
-      "count": 24
+      "count": 23
     },
     {
       "platform": "YouTube",
@@ -57,7 +57,7 @@
     {
       "platform": "TikTok",
       "sentiment_family": "negative",
-      "count": 17
+      "count": 15
     },
     {
       "platform": "Instagram",
@@ -67,7 +67,7 @@
     {
       "platform": "YouTube",
       "sentiment_family": "negative",
-      "count": 3
+      "count": 2
     },
     {
       "platform": "Instagram",
@@ -79,21 +79,21 @@
     {
       "topic_cluster": "Deforestasi & tata kelola hutan",
       "sentiment_family": "neutral",
-      "count": 78
+      "count": 81
     },
     {
       "topic_cluster": "Konflik lahan & hutan lindung",
       "sentiment_family": "neutral",
-      "count": 47
-    },
-    {
-      "topic_cluster": "Deforestasi & tata kelola hutan",
-      "sentiment_family": "positive",
-      "count": 29
+      "count": 48
     },
     {
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
       "sentiment_family": "neutral",
+      "count": 28
+    },
+    {
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_family": "positive",
       "count": 28
     },
     {
@@ -104,12 +104,7 @@
     {
       "topic_cluster": "Konflik lahan & hutan lindung",
       "sentiment_family": "negative",
-      "count": 13
-    },
-    {
-      "topic_cluster": "Deforestasi & tata kelola hutan",
-      "sentiment_family": "negative",
-      "count": 8
+      "count": 12
     },
     {
       "topic_cluster": "Konflik lahan & hutan lindung",
@@ -117,7 +112,12 @@
       "count": 8
     },
     {
-      "topic_cluster": "Pertanyaan publik",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_family": "negative",
+      "count": 6
+    },
+    {
+      "topic_cluster": "Pertanyaan teknis publik",
       "sentiment_family": "neutral",
       "count": 5
     },
@@ -154,6 +154,11 @@
       "count": 28
     },
     {
+      "risk_flag": "public_aspiration_needs_response",
+      "platform": "TikTok",
+      "count": 17
+    },
+    {
       "risk_flag": "deforestation_criticism",
       "platform": "TikTok",
       "count": 15
@@ -174,23 +179,28 @@
       "count": 3
     },
     {
-      "risk_flag": "conflict_land_tenure",
-      "platform": "YouTube",
-      "count": 2
-    },
-    {
       "risk_flag": "climate_impact_concern",
       "platform": "TikTok",
       "count": 2
     },
     {
+      "risk_flag": "public_aspiration_needs_response",
+      "platform": "YouTube",
+      "count": 2
+    },
+    {
       "risk_flag": "conflict_land_tenure",
-      "platform": "Instagram",
-      "count": 1
+      "platform": "YouTube",
+      "count": 2
     },
     {
       "risk_flag": "climate_impact_concern",
       "platform": "YouTube",
+      "count": 1
+    },
+    {
+      "risk_flag": "conflict_land_tenure",
+      "platform": "Instagram",
       "count": 1
     },
     {
@@ -601,9 +611,9 @@
       "platform": "TikTok",
       "content_date": "2026-01-14 08:22:15",
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "unanswered_question",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response; unanswered_question",
       "comment_like_count": 1.0,
       "post_comment_count": 9.0,
       "text_for_sentiment": "MIN KUDU NGADU KE SIAPA LAGI ADA GAJAH JADI TULANG PUNGGUNG MANUSIA DI BALI. DI PERLAKUKAN TIDAK BAIK!! TOLLNG DONG BANTU.",
@@ -613,9 +623,9 @@
       "platform": "TikTok",
       "content_date": "2026-01-02 16:07:14",
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response",
       "comment_like_count": 2.0,
       "post_comment_count": 2.0,
       "text_for_sentiment": "Min tolong dong di usut Mason Elephant Park bali, kasihan loh kemaren2 gajah ditunggangi sekarang bayi gajah dijemur",
@@ -623,23 +633,11 @@
     },
     {
       "platform": "TikTok",
-      "content_date": "2023-07-04 04:56:27",
-      "topic_cluster": "Konflik lahan & hutan lindung",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
-      "comment_like_count": 1.0,
-      "post_comment_count": 282.0,
-      "text_for_sentiment": "ibu tolong donk carikan solusi buat kampung saya yang hutan bakaux di tebang dan di buat empang",
-      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
-    },
-    {
-      "platform": "TikTok",
       "content_date": "2026-01-12 11:12:54",
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response",
       "comment_like_count": 1.0,
       "post_comment_count": 15.0,
       "text_for_sentiment": "min gajah di mason bali masih ditunggangi,tolong lah mna komitmen kalian😭😭😭masa pemerintahan kalah sma mason",
@@ -649,9 +647,9 @@
       "platform": "TikTok",
       "content_date": "2026-01-13 01:44:02",
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response",
       "comment_like_count": 1.0,
       "post_comment_count": 15.0,
       "text_for_sentiment": "Tolong kroscek gajah di Mason park min, ini sudah sangat memperhatin kan",
@@ -659,39 +657,51 @@
     },
     {
       "platform": "TikTok",
+      "content_date": "2026-01-17 01:05:37",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "deforestation_criticism; public_aspiration_needs_response; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 9.0,
+      "text_for_sentiment": "tolong bantu gajah gajah diIndonesia pls jangan tutup mata🥹 Juli Antoni #SAVETESSONILO #SAVEPLGSEBANGA #SAVEPLGSEBLAT #SAVEWAYKAMBAS #SAVEPLGMINASRIAU #SAVEHUTANKALIMANTAN #SAVEHUTANPAPUA #SAVEWILDLIFE #SAVEHUTANINDONESIA #STOPDEFORESTASI #KAMIBERSAMAPARASATWAINDONESIA",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7594755168709725461"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2026-01-17 01:04:03",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "deforestation_criticism; public_aspiration_needs_response; unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 7.0,
+      "text_for_sentiment": "tolong bantu gajah' diIndonesia pls jangan tutup mata #SAVETESSONILO #SAVEPLGSEBANGA #SAVEPLGSEBLAT #SAVEWAYKAMBAS #SAVEPLGMINASRIAU #SAVEHUTANKALIMANTAN #SAVEHUTANPAPUA #SAVEWILDLIFE #SAVEHUTANINDONESIA #STOPDEFORESTASI #KAMIBERSAMAPARASATWAINDONESIA",
+      "url": "https://www.tiktok.com/@kemenhut_ri/video/7595875420482833685"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-04 04:56:27",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "ibu tolong donk carikan solusi buat kampung saya yang hutan bakaux di tebang dan di buat empang",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
       "content_date": "2026-01-14 14:27:35",
       "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
+      "sentiment_label": "aspiration",
+      "stance_label": "public_expectation_or_action_request",
+      "risk_flags": "public_aspiration_needs_response",
       "comment_like_count": 1.0,
       "post_comment_count": 15.0,
       "text_for_sentiment": "Gajah di Mason tolong perhatiannya. satwa dilindungi bukan dieksploitasi demi uang",
       "url": "https://www.tiktok.com/@kemenhut_ri/video/7594277825205751061"
-    },
-    {
-      "platform": "TikTok",
-      "content_date": "2026-01-15 05:02:47",
-      "topic_cluster": "Edukasi FOLU Net Sink 2030",
-      "sentiment_label": "question",
-      "stance_label": "question_or_information_seeking",
-      "risk_flags": "",
-      "comment_like_count": "",
-      "post_comment_count": 15.0,
-      "text_for_sentiment": "tolong mason elephant park pak banyak gajah di exploitasi, gajah hamil ditunggangi, gajah kecil di tunggangi, luka luka gajah nya , untuk minum mereka susah,, tolong pak",
-      "url": "https://www.tiktok.com/@kemenhut_ri/video/7594277825205751061"
-    },
-    {
-      "platform": "YouTube",
-      "content_date": "",
-      "topic_cluster": "Deforestasi & tata kelola hutan",
-      "sentiment_label": "negative",
-      "stance_label": "critical_or_concern",
-      "risk_flags": "",
-      "comment_like_count": 0.0,
-      "post_comment_count": "",
-      "text_for_sentiment": "Di tempat kami hutan habiz d babat pembalakn liar pak,,airterjun objek wisata d tempat kami yg biasanya airnya besar sekr sudah kecil sekali karena penebang liar ...saya ingin sekali menghijaukan kembali hutan kami pak ,,mohon bantuannya pak ,,sebelum semua daerah kami d gunduli penebang liar 👏👏",
-      "url": "https://www.youtube.com/watch?v=UZBbIeLsnMI"
     },
     {
       "platform": "TikTok",
@@ -704,18 +714,6 @@
       "post_comment_count": 7.0,
       "text_for_sentiment": "stop deforestasi ya Kemenhut ayo dong buat kebijakan yang berani memberikan solusi yang konkret apa tidak sakit sedih melihat para satwa liar yang seharusnya dilindungi oleh negara tapi akhirnya perlahan punah semuanya",
       "url": "https://www.tiktok.com/@kemenhut_ri/video/7590232058442616084"
-    },
-    {
-      "platform": "Instagram",
-      "content_date": "2025-12-05 00:31:56 +0000",
-      "topic_cluster": "Konflik lahan & hutan lindung",
-      "sentiment_label": "negative",
-      "stance_label": "critical_or_concern",
-      "risk_flags": "conflict_land_tenure; climate_impact_concern",
-      "comment_like_count": 0.0,
-      "post_comment_count": "",
-      "text_for_sentiment": "Agro forestri, paru2 sehat, lahan subur bebas dari ancaman bencana",
-      "url": "https://www.instagram.com/p/DM7UqqPvdw6/"
     },
     {
       "platform": "YouTube",
@@ -751,6 +749,18 @@
       "comment_like_count": 1.0,
       "post_comment_count": 282.0,
       "text_for_sentiment": "hutan untuk perusahaan.",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-11 02:05:15",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "negative",
+      "stance_label": "critical_or_concern",
+      "risk_flags": "conflict_land_tenure",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "iya perusahaan lebih besar buk",
       "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
     },
     {
@@ -839,21 +849,57 @@
     },
     {
       "platform": "TikTok",
-      "content_date": "2023-06-05 13:00:31",
+      "content_date": "2023-06-06 14:56:23",
       "topic_cluster": "Deforestasi & tata kelola hutan",
-      "sentiment_label": "positive",
-      "stance_label": "supportive_or_appreciative",
-      "risk_flags": "",
-      "comment_like_count": 2.0,
+      "sentiment_label": "question",
+      "stance_label": "technical_question_or_information_seeking",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 1.0,
       "post_comment_count": 282.0,
-      "text_for_sentiment": "Ibu Afni IDOLAKUUUUU, org Siak untuk masyarakat SIAK.. 😍😍😍",
+      "text_for_sentiment": "Boleh ajukan tp blm tentu di setujui",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-06-14 18:02:47",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "question",
+      "stance_label": "technical_question_or_information_seeking",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "buk, kampung saya komplik kawasan dengan taman nasional, kampung kami sudah di klaim masuk dalam kawasan, ada solusi buk?",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-03 11:50:16",
+      "topic_cluster": "Deforestasi & tata kelola hutan",
+      "sentiment_label": "question",
+      "stance_label": "technical_question_or_information_seeking",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": "",
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "gk percaya bagaimana dengan IKN",
+      "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
+    },
+    {
+      "platform": "TikTok",
+      "content_date": "2023-07-14 04:59:55",
+      "topic_cluster": "Konflik lahan & hutan lindung",
+      "sentiment_label": "question",
+      "stance_label": "technical_question_or_information_seeking",
+      "risk_flags": "unanswered_question",
+      "comment_like_count": 1.0,
+      "post_comment_count": 282.0,
+      "text_for_sentiment": "Dn yg mnciptkn konflik itu ada,siapa .....?? apkh rkyt jelata,pengusaha,negara,apa macan rimba....🙏🙏",
       "url": "https://www.tiktok.com/@afni.z/video/7241168082918575366"
     }
   ],
   "recommendations": [
-    "Prioritaskan explainer FOLU Net Sink 2030 yang menjawab pertanyaan publik dengan bahasa non-teknis.",
-    "Pisahkan komunikasi edukasi iklim dari isu konflik lahan, karena komentar kritis banyak muncul pada lahan/hutan lindung/perusahaan.",
-    "Gunakan format short video Q&A untuk menjawab komentar bertipe question_or_information_seeking.",
+    "Pisahkan aspirasi/permintaan tindak lanjut dari pertanyaan teknis agar respons Kemenhut lebih tepat sasaran.",
+    "Tindak lanjuti aspirasi publik yang menyebut satwa, konflik lahan, pembalakan, atau permintaan solusi dengan kanal aduan dan update lapangan.",
+    "Gunakan format short video Q&A hanya untuk komentar pertanyaan teknis, bukan untuk keluhan/harapan yang butuh action response.",
     "Perkuat proof-of-work program lapangan: perhutanan sosial, kopi, KTH, dan cerita daerah cenderung lebih mudah dipahami publik.",
     "Monitoring risiko greenwashing/deforestasi harus rutin karena sentiment negatif kecil tapi reputationally sensitive."
   ]

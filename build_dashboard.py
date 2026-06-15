@@ -25,7 +25,8 @@ POS_TERMS = {
 NEG_TERMS = {
     'gagal','buruk','jelek','bohong','omong kosong','pencitraan','korup','korupsi','bagi-bagi','jabatan','kontroversi','ambisi','deforestasi','banjir','bencana','rusak','merusak','kritik','masalah','konflik','mafia','tidak percaya','nggak percaya','ga percaya','gak percaya','parah','aneh','sulit','impossible','hoax','scam','tambang','penambangan','hutan lindung','perusahaan','ambil lahannya','dijual','tanda tanya','greenwashing','izin','krisis','emisi naik','tercemar','tidak baik','diperlakukan tidak baik','di perlakukan tidak baik','penebang liar','pembalak','habiz d babat','habis dibabat','gunduli','stop deforestasi','stopdeforestasi','sedih','sakit','dampak','ancaman'
 }
-QUESTION_TERMS = {'apa','apakah','bagaimana','kapan','dimana','di mana','kenapa','mengapa','siapa','berapa','?','gimana','bisakah','bertanya','ijin bertanya','izin bertanya','tanya','tolong','mohon','bantu','ngadu','carikan solusi'}
+QUESTION_TERMS = {'apa','apakah','bagaimana','kapan','dimana','di mana','kenapa','mengapa','siapa','berapa','?','gimana','bisakah','bertanya','ijin bertanya','izin bertanya','tanya','boleh'}
+ASPIRATION_TERMS = {'tolong','mohon','bantu','ngadu','carikan solusi','perhatikan','perhatiannya','kroscek','crosscheck','cek','usut','komitmen','solusi konkret','berikan solusi','minta materinya','minta materi','kudu ngadu'}
 LOW_INFO = {'hadir','absen','ijin hadir','izin hadir','ok','oke','siap','mantap','terima kasih','thanks','makasih','🙏','👍','🔥','😍','hadirr','hadirrr'}
 
 TOPIC_RULES = [
@@ -36,7 +37,8 @@ TOPIC_RULES = [
     ('Perhutanan sosial & ekonomi karbon', ['hutan sosial','perhutanan sosial','ekonomi karbon','berkeadilan','masyarakat','sertifikat']),
     ('Program lapangan & daerah', ['kopi','kth','bpdlh','papua','riau','siak','lampung','pelatihan','demplot','desa']),
     ('Dukungan & apresiasi', ['dukung','mantap','keren','terima kasih','apresiasi','semangat','sukses','idolaku']),
-    ('Pertanyaan publik', ['?','apa','apakah','bagaimana','kenapa','gimana','kapan','boleh']),
+    ('Aspirasi & permintaan tindak lanjut', ['tolong','mohon','bantu','ngadu','carikan solusi','perhatikan','kroscek','usut','komitmen','solusi konkret']),
+    ('Pertanyaan teknis publik', ['?','apa','apakah','bagaimana','kenapa','gimana','kapan','boleh']),
 ]
 
 RISK_RULES = [
@@ -44,6 +46,7 @@ RISK_RULES = [
     ('deforestation_criticism', ['deforestasi','rusak','merusak','kawasan hutan','mafia']),
     ('trust_greenwashing_risk', ['pencitraan','bohong','tidak percaya','ga percaya','gak percaya','greenwashing','tanda tanya']),
     ('climate_impact_concern', ['banjir','bencana','cuaca','emisi naik','pemanasan global']),
+    ('public_aspiration_needs_response', ['tolong','mohon','bantu','ngadu','carikan solusi','perhatikan','kroscek','usut','komitmen','solusi konkret']),
     ('unanswered_question', ['?','apa','apakah','bagaimana','kenapa','gimana','boleh']),
 ]
 
@@ -67,16 +70,22 @@ def count_terms(s, terms):
     sl = s.lower()
     return sum(1 for t in terms if t in sl)
 
-def has_question_intent(s):
+def has_term_intent(s, terms):
     sl = s.lower()
-    if '?' in sl:
+    if '?' in sl and terms is QUESTION_TERMS:
         return True
-    for t in QUESTION_TERMS:
+    for t in terms:
         if t == '?':
             continue
         if re.search(r'(?<!\w)' + re.escape(t) + r'(?!\w)', sl):
             return True
     return False
+
+def has_question_intent(s):
+    return has_term_intent(s, QUESTION_TERMS)
+
+def has_aspiration_intent(s):
+    return has_term_intent(s, ASPIRATION_TERMS)
 
 def classify(text, source='social'):
     raw = text or ''
@@ -84,6 +93,7 @@ def classify(text, source='social'):
     pos = count_terms(s, POS_TERMS)
     neg = count_terms(s, NEG_TERMS)
     is_q = has_question_intent(s)
+    is_aspiration = has_aspiration_intent(s)
     wc = word_count(raw)
     only_emoji = bool(emoji_re.fullmatch(raw.strip())) if raw.strip() else False
     low = s in LOW_INFO or wc <= 1 or only_emoji
@@ -91,6 +101,8 @@ def classify(text, source='social'):
     has_strong_criticism = any(t in s for t in ['stop deforestasi', 'stopdeforestasi', 'jangan', 'tidak baik', 'diperlakukan tidak baik', 'di perlakukan tidak baik', 'penebang liar', 'pembalak', 'habiz d babat', 'gunduli'])
     if low:
         sentiment = 'neutral_low_information'
+    elif is_aspiration:
+        sentiment = 'aspiration'
     elif is_q and not (has_strong_criticism and neg > pos):
         sentiment = 'question'
     elif neg > pos:
@@ -103,15 +115,17 @@ def classify(text, source='social'):
         stance = 'media_discourse_not_direct_public_comment'
     elif low:
         stance = 'low_information'
+    elif sentiment == 'aspiration':
+        stance = 'public_expectation_or_action_request'
     elif sentiment == 'question':
-        stance = 'question_or_information_seeking'
+        stance = 'technical_question_or_information_seeking'
     elif neg > pos:
         stance = 'critical_or_concern'
     elif pos > neg:
         stance = 'supportive_or_appreciative'
     else:
         stance = 'neutral_or_unclear'
-    emotion = 'curiosity_or_help_request' if sentiment == 'question' else 'concern' if sentiment == 'negative' else 'appreciation' if sentiment == 'positive' else 'low_information' if low else 'neutral'
+    emotion = 'hope_or_urgent_public_request' if sentiment == 'aspiration' else 'curiosity' if sentiment == 'question' else 'concern' if sentiment == 'negative' else 'appreciation' if sentiment == 'positive' else 'low_information' if low else 'neutral'
     return sentiment, score, stance, emotion, low
 
 def topic(text):
@@ -206,7 +220,7 @@ for _, r in web.iterrows():
 comments = pd.DataFrame(records)
 posts_df = pd.DataFrame(posts).drop_duplicates('url')
 comments['platform'] = comments['platform'].fillna('Unknown')
-comments['sentiment_family'] = comments['sentiment_label'].replace({'neutral_low_information':'neutral','neutral_question':'neutral','question':'neutral'})
+comments['sentiment_family'] = comments['sentiment_label'].replace({'neutral_low_information':'neutral','neutral_question':'neutral','question':'neutral','aspiration':'neutral'})
 meaningful = comments[(comments['analysis_scope']=='public_social_comment') & (comments['is_low_information']==False) & (comments['text_word_count']>=2)].copy()
 social = comments[comments['analysis_scope']=='public_social_comment'].copy()
 
@@ -224,20 +238,23 @@ for _, r in meaningful.iterrows():
 risk_df = pd.DataFrame(risk_rows)
 risk_summary = group_count(risk_df, ['risk_flag','platform']) if len(risk_df) else pd.DataFrame(columns=['risk_flag','platform','count'])
 
-# Representative comments: balanced examples for Positive, Negative, and Question.
-# Do not rank only by absolute sentiment score; that hides help-seeking questions
+# Representative comments: balanced examples for Aspirations, Negative, Positive, and true Questions.
+# Do not rank only by absolute sentiment score; that hides public expectations
 # that are semantically important but score near zero in lexicon rules.
-top_pool = meaningful[meaningful['sentiment_label'].isin(['positive','negative','question'])].copy()
+top_pool = meaningful[meaningful['sentiment_label'].isin(['positive','negative','aspiration','question'])].copy()
 top_pool['abs_score'] = top_pool['sentiment_score'].abs()
 top_pool['comment_like_count_sort'] = top_pool['comment_like_count'].fillna(0)
 top_pool['post_comment_count_sort'] = top_pool['post_comment_count'].fillna(0)
 parts = []
-for label, n in [('question', 8), ('negative', 8), ('positive', 8)]:
+for label, n in [('aspiration', 8), ('negative', 7), ('positive', 7), ('question', 4)]:
     g = top_pool[top_pool['sentiment_label'] == label].copy()
-    if label == 'question':
-        g['urgent_request_score'] = g['text_for_sentiment'].str.lower().apply(lambda s: sum(t in s for t in ['ngadu','tolong','bantu','tidak baik','gajah','carikan solusi','mohon']))
+    if label == 'aspiration':
+        g['urgent_request_score'] = g['text_for_sentiment'].str.lower().apply(lambda s: sum(t in s for t in ['ngadu','tolong','bantu','tidak baik','gajah','carikan solusi','mohon','perhatikan','kroscek','usut','komitmen']))
         g = g.sort_values(['urgent_request_score','comment_like_count_sort','post_comment_count_sort','text_word_count'], ascending=False).head(n)
     elif label == 'negative':
+        # Exclude constructive/desired-outcome phrasing such as "bebas dari ancaman bencana"
+        # from representative negative cards even if a risk keyword is present.
+        g = g[~g['text_for_sentiment'].str.lower().str.contains('bebas dari ancaman', na=False)]
         g = g.sort_values(['abs_score','comment_like_count_sort','post_comment_count_sort'], ascending=False).head(n)
     else:
         g = g.sort_values(['sentiment_score','comment_like_count_sort','post_comment_count_sort'], ascending=False).head(n)
@@ -278,9 +295,9 @@ dashboard = {
     'top_posts': post_records,
     'representative_comments': comment_records,
     'recommendations': [
-        'Prioritaskan explainer FOLU Net Sink 2030 yang menjawab pertanyaan publik dengan bahasa non-teknis.',
-        'Pisahkan komunikasi edukasi iklim dari isu konflik lahan, karena komentar kritis banyak muncul pada lahan/hutan lindung/perusahaan.',
-        'Gunakan format short video Q&A untuk menjawab komentar bertipe question_or_information_seeking.',
+        'Pisahkan aspirasi/permintaan tindak lanjut dari pertanyaan teknis agar respons Kemenhut lebih tepat sasaran.',
+        'Tindak lanjuti aspirasi publik yang menyebut satwa, konflik lahan, pembalakan, atau permintaan solusi dengan kanal aduan dan update lapangan.',
+        'Gunakan format short video Q&A hanya untuk komentar pertanyaan teknis, bukan untuk keluhan/harapan yang butuh action response.',
         'Perkuat proof-of-work program lapangan: perhutanan sosial, kopi, KTH, dan cerita daerah cenderung lebih mudah dipahami publik.',
         'Monitoring risiko greenwashing/deforestasi harus rutin karena sentiment negatif kecil tapi reputationally sensitive.'
     ]
