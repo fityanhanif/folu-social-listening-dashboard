@@ -157,7 +157,10 @@ async function init() {
     negative: Number(m.sentiment_counts.negative || 0)
   };
   const total = m.social_comments_total || Object.values(counts).reduce((a,b)=>a+b,0);
-  document.getElementById('overallSignal').textContent = `${pct(counts.positive, total)} positive · ${pct(counts.negative, total)} negative`;
+  document.getElementById('overallSignal').innerHTML = `
+    <span class="signal-metric positive"><small>Positive</small>${pct(counts.positive, total)}</span>
+    <span class="signal-metric negative"><small>Negative</small>${pct(counts.negative, total)}</span>
+  `;
   document.getElementById('overallNarrative').textContent = `${fmt.format(m.social_comments_total)} komentar publik dianalisis. Sinyal terbesar masih neutral/question/low-information, dengan negative cluster kecil tapi penting untuk isu lahan, deforestasi, dan trust.`;
   renderBars('overallBars', counts);
   drawDonut(document.getElementById('sentimentCanvas'), counts);

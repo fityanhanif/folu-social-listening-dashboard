@@ -44,8 +44,12 @@ a { color: inherit; }
 .btn.primary { color: #22160b; background: linear-gradient(135deg, var(--gold), var(--amber)); box-shadow: 0 14px 34px rgba(215,150,59,.25); }
 .glass, .panel, .kpi-card { backdrop-filter: blur(18px); border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
 .hero-card { border-radius: 30px; padding: 26px; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; }
-.hero-card-top span { color: var(--muted); font-size: 13px; font-weight: 700; }
-.hero-card-top strong { display: block; font-size: 40px; letter-spacing: -.04em; margin-top: 8px; }
+.hero-card-top > span { color: var(--muted); font-size: 13px; font-weight: 700; }
+.hero-card-top strong { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.hero-card-top .signal-metric { display: flex; flex-direction: column; gap: 6px; padding: 14px; border-radius: 18px; font-size: 38px; line-height: 1; letter-spacing: -.04em; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.045); }
+.hero-card-top .signal-metric small { font-size: 11px; letter-spacing: .12em; line-height: 1; text-transform: uppercase; color: var(--muted); }
+.hero-card-top .signal-metric.positive { color: var(--green); }
+.hero-card-top .signal-metric.negative { color: var(--red); }
 .signal-bars { display: grid; gap: 12px; margin: 26px 0; }
 .signal-row { display: grid; grid-template-columns: 92px 1fr 54px; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; }
 .signal-track { height: 10px; background: rgba(255,255,255,.08); border-radius: 99px; overflow: hidden; }
