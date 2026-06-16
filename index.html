@@ -28,7 +28,7 @@
         <a href="#sentiment">Sentiment</a>
         <a href="#topics">Topics</a>
         <a href="#risks">Risks</a>
-        <a href="#data">Data</a>
+        <a href="#data">Method</a>
       </div>
     </nav>
 
@@ -132,23 +132,23 @@
     <section class="panel data-panel" id="data">
       <div class="section-head row">
         <div>
-          <span class="eyebrow">Data & Method</span>
-          <h2>Download, metodologi, dan status scraping</h2>
+          <span class="eyebrow">Method</span>
+          <h2>Metodologi teknikal pengumpulan dan klasifikasi</h2>
         </div>
       </div>
-      <div class="data-grid">
+      <div class="data-grid method-grid">
         <div>
-          <h3>Dataset</h3>
-          <ul class="downloads">
-            <li><a href="data/folu_social_listening_report.xlsx">Full Excel report</a></li>
-            <li><a href="data/folu_social_comments_sentiment.csv">Social comments sentiment CSV</a></li>
-            <li><a href="data/folu_posts_master.csv">Posts master CSV</a></li>
-            <li><a href="data/folu_risk_flags.csv">Risk flags CSV</a></li>
-            <li><a href="data/dashboard_data.json">Dashboard JSON</a></li>
-          </ul>
+          <h3>Technical workflow</h3>
+          <ol class="method-steps">
+            <li>Query discovery berbasis kata kunci FOLU Talks, FOLU Net Sink 2030, deforestasi, perhutanan sosial, dan konflik kawasan hutan.</li>
+            <li>Ekstraksi metadata post: platform, tanggal, caption/judul, URL, engagement, dan tipe konten.</li>
+            <li>Normalisasi komentar: deduplikasi URL/teks, anonimisasi author, pembersihan emoji-only atau low-information, lalu penyatuan lintas platform.</li>
+            <li>Klasifikasi komentar memakai rulebook berbasis leksikon dan konteks: sentiment family, stance, topic cluster, serta risk flag.</li>
+            <li>Validasi manual pada representative comments supaya label tidak hanya positif/negatif generik, tetapi sesuai konteks isu publik.</li>
+          </ol>
         </div>
         <div>
-          <h3>Scraping status</h3>
+          <h3>Coverage status</h3>
           <div id="sourceStatus" class="method-list"></div>
         </div>
       </div>

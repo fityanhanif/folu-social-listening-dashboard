@@ -112,3 +112,9 @@ footer { max-width: 1240px; margin: 0 auto; padding: 26px clamp(18px, 4vw, 56px)
   .section-head.row, footer { flex-direction: column; align-items: flex-start; }
   .hero-card { min-height: 320px; }
 }
+
+.badge.cautious_support { background: rgba(223, 193, 139, 0.18); color: #f1d59c; border: 1px solid rgba(223, 193, 139, 0.28); }
+.badge.land_conflict_concern { background: rgba(255, 141, 117, 0.16); color: #ffb19f; border: 1px solid rgba(255, 141, 117, 0.28); }
+.method-steps { margin: 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.7; }
+.method-steps li + li { margin-top: 0.7rem; }
+.method-grid { align-items: start; }

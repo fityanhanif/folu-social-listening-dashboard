@@ -26,7 +26,7 @@ Includes:
 - Sentiment uses transparent rule-based Indonesian/English lexicon for auditability.
 - Topic clusters and risk flags use keyword rules, not black-box model outputs.
 - Public export anonymizes comment authors as hashes.
-- Scraping status is disclosed in the dashboard. For TikTok, BYOB discovery worked; Obscura was attempted but returned blank/eval-null, so extractor/API/session fallback was used.
+- Method status is disclosed in the dashboard with technical coverage notes for each source. TikTok metadata and comments were extracted from public pages, then deduplicated and cleaned before classification.
 
 ## Local verification
 

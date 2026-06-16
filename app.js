@@ -131,6 +131,20 @@ function renderTable(rows) {
   document.getElementById('topPostsTable').innerHTML = `<thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${body}</tbody>`;
 }
 
+
+function displayCommentLabel(label) {
+  const labels = {
+    aspiration: 'public aspiration',
+    cautious_support: 'cautious support',
+    land_conflict_concern: 'land conflict concern',
+    question: 'technical question',
+    positive: 'positive',
+    negative: 'negative',
+    neutral: 'neutral'
+  };
+  return labels[label] || String(label || '').replaceAll('_', ' ');
+}
+
 function renderComments(rows) {
   document.getElementById('commentsList').innerHTML = rows.slice(0, 14).map(r => `
     <article class="comment-card">
@@ -138,7 +152,7 @@ function renderComments(rows) {
         <span>${r.platform}</span>
         <span>·</span>
         <span>${r.topic_cluster}</span>
-        <span class="badge ${r.sentiment_label}">${r.sentiment_label === 'aspiration' ? 'public aspiration' : r.sentiment_label}</span>
+        <span class="badge ${r.sentiment_label}">${displayCommentLabel(r.sentiment_label)}</span>
         ${r.risk_flags ? `<span>⚠ ${r.risk_flags}</span>` : ''}
       </div>
       <p>${r.text_for_sentiment}</p>

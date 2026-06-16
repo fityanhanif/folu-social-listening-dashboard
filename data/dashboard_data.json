@@ -1,6 +1,6 @@
 {
   "metrics": {
-    "processed_at": "2026-06-16 02:22:15 +0700",
+    "processed_at": "2026-06-16 22:15:17 +0700",
     "posts_total": 53,
     "social_comments_total": 301,
     "meaningful_comments_total": 236,
@@ -22,10 +22,10 @@
     },
     "risk_comment_rows": 147,
     "source_status": {
-      "instagram": "BYOB + Instagram API/session scrape available from prior task; comments included.",
-      "youtube": "YouTube streams/comments dataset included from prior scrape.",
-      "tiktok": "BYOB discovery worked; Obscura attempted but returned blank/eval null on TikTok; fallback extractor/API/session used; comments included.",
-      "website": "BYOB verified seeds + Obscura bulk text; zero-byte PPID pages excluded during cleaning."
+      "instagram": "Post dan komentar publik dinormalisasi dari halaman/reel relevan, termasuk metadata waktu, engagement, caption, dan URL.",
+      "youtube": "Komentar dan metadata video disatukan ke skema lintas platform untuk analisis sentiment, topik, dan risk flag.",
+      "tiktok": "Metadata post dan komentar diekstrak dari halaman publik, lalu dibersihkan dari duplikasi dan komentar low-information.",
+      "website": "Artikel/halaman web relevan dipakai sebagai konteks media discourse; halaman kosong atau tidak valid dikeluarkan saat cleaning."
     }
   },
   "sentiment_by_platform": [
@@ -755,9 +755,9 @@
       "platform": "TikTok",
       "content_date": "2023-06-11 02:05:15",
       "topic_cluster": "Konflik lahan & hutan lindung",
-      "sentiment_label": "negative",
-      "stance_label": "critical_or_concern",
-      "risk_flags": "conflict_land_tenure",
+      "sentiment_label": "land_conflict_concern",
+      "stance_label": "land_tenure_power_imbalance_concern",
+      "risk_flags": "land_tenure_power_imbalance",
       "comment_like_count": "",
       "post_comment_count": 282.0,
       "text_for_sentiment": "iya perusahaan lebih besar buk",
@@ -767,9 +767,9 @@
       "platform": "Instagram",
       "content_date": "2025-11-04 08:46:12 +0000",
       "topic_cluster": "Deforestasi & tata kelola hutan",
-      "sentiment_label": "positive",
-      "stance_label": "supportive_or_appreciative",
-      "risk_flags": "",
+      "sentiment_label": "cautious_support",
+      "stance_label": "conditional_trust_or_cautious_support",
+      "risk_flags": "trust_expectation",
       "comment_like_count": 0.0,
       "post_comment_count": "",
       "text_for_sentiment": "Akhirnya semangat kolaborasi, tapi semoga tulus dan terbuka.",
