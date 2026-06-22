@@ -1,7 +1,7 @@
 const COLORS = {
-  positive: '#9fd17a',
-  negative: '#ff8d75',
-  neutral: '#dfc18b'
+  positive: '#3f8f5d',
+  negative: '#b75643',
+  neutral: '#b9842b'
 };
 const fmt = new Intl.NumberFormat('id-ID');
 const pct = (value, total) => total ? `${Math.round((value / total) * 100)}%` : '0%';
@@ -31,12 +31,12 @@ function drawDonut(canvas, counts) {
   ctx.arc(cx, cy, r * 0.58, 0, Math.PI * 2);
   ctx.fill();
   ctx.globalCompositeOperation = 'source-over';
-  ctx.fillStyle = '#fff8ea';
-  ctx.font = '800 30px Inter, sans-serif';
+  ctx.fillStyle = '#1b211c';
+  ctx.font = '800 30px IBM Plex Sans, sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText(fmt.format(total), cx, cy + 6);
-  ctx.fillStyle = '#cdbb9d';
-  ctx.font = '600 12px Inter, sans-serif';
+  ctx.fillStyle = '#697267';
+  ctx.font = '600 12px IBM Plex Mono, monospace';
   ctx.fillText('comments', cx, cy + 28);
 
   const items = [
@@ -49,9 +49,9 @@ function drawDonut(canvas, counts) {
   items.forEach(([key, val, label]) => {
     ctx.fillStyle = COLORS[key];
     ctx.beginPath(); ctx.arc(w * 0.62, y - 5, 7, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = '#fff8ea'; ctx.font = '800 18px Inter, sans-serif';
+    ctx.fillStyle = '#1b211c'; ctx.font = '800 18px IBM Plex Sans, sans-serif';
     ctx.fillText(`${label}: ${fmt.format(val)}`, w * 0.65, y);
-    ctx.fillStyle = '#cdbb9d'; ctx.font = '600 13px Inter, sans-serif';
+    ctx.fillStyle = '#697267'; ctx.font = '600 13px IBM Plex Mono, monospace';
     ctx.fillText(pct(val, total), w * 0.65, y + 22);
     y += 62;
   });
@@ -124,7 +124,7 @@ function renderTable(rows) {
     <td>${r.source_account || '-'}</td>
     <td>${r.post_type || '-'}</td>
     <td>${r.date || '-'}</td>
-    <td>❤ ${clean(r.likes)}<br>💬 ${clean(r.comments)}<br>↗ ${clean(r.shares)}<br>▶ ${clean(r.views)}</td>
+    <td>Like: ${clean(r.likes)}<br>Comment: ${clean(r.comments)}<br>Share: ${clean(r.shares)}<br>View: ${clean(r.views)}</td>
     <td>${shortText(r.title_or_caption, 150)}</td>
     <td><a href="${r.url}" target="_blank" rel="noopener">Open</a></td>
   </tr>`).join('');
@@ -150,10 +150,9 @@ function renderComments(rows) {
     <article class="comment-card">
       <div class="comment-meta">
         <span>${r.platform}</span>
-        <span>·</span>
         <span>${r.topic_cluster}</span>
         <span class="badge ${r.sentiment_label}">${displayCommentLabel(r.sentiment_label)}</span>
-        ${r.risk_flags ? `<span>⚠ ${r.risk_flags}</span>` : ''}
+        ${r.risk_flags ? `<span>Risk: ${r.risk_flags}</span>` : ''}
       </div>
       <p>${r.text_for_sentiment}</p>
       <div class="comment-meta"><span>${r.content_date || ''}</span><span>Likes: ${clean(r.comment_like_count)}</span><a href="${r.url}" target="_blank" rel="noopener">source</a></div>
